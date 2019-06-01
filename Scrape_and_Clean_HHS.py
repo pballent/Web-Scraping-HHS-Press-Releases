@@ -66,11 +66,10 @@ values2 = []
 for i in l2:
     soup = BeautifulSoup(urllib2.urlopen(i).read())
     soup.get_text()
-    subc = soup.findAll('p') #taking the <p> from the HTML
-    subd = str(subc) #converting to string from ResultSet for the replace
-    sube = subd.replace(',','') #this helps it not break when doing csv conversion
-    ##cleaning out all the html stuff, allow not tags, strip stuff
-    subf = bleach.clean(sube, tags=[], strip=True)
+    subc = soup.findAll('p') ## Taking the <p> from the HTML
+    subd = str(subc) ## Converting to string from ResultSet for the replace
+    sube = subd.replace(',','') ## Remove commas from the text so it doesn't break when doing csv conversion
+    subf = bleach.clean(sube, tags=[], strip=True)  ##Cleaning out all the html stuff, allow no tags, strip HTML-y stuff
     keys.append(i)
     values.append(sube)
     values2.append(subf)
