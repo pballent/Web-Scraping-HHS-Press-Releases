@@ -40,7 +40,7 @@ for links in All:
 z_set = list(set(z))
 
 
-##Using a regex to match only the valid http addresses with only one https and one html
+##Using a regex to match only the valid http addresses with only one https and one html and those that are actually press releases
 import re
 
 p = re.compile('https{1}.*html{1}')
@@ -70,14 +70,14 @@ for i in l2:
     values.append(sube)
     values2.append(subf)
 
-## merging the url-value pairs into a dictionary that isn't really needed at this point but could be later
+## Merging the url-value pairs into a dictionary that isn't really needed at this point but could be later
 data = dict(zip(keys, values2)) 
 ##printing results
    
 
-##merging them into a data frame
+## Merging them into a data frame
  pd = pandas.DataFrame({'col': keys})
- pd['col2'] = values
- pd['col3'] = values2
- pd.to_csv('pd_ouput3.csv', sep=',', encoding='utf-8')
+ pd['text'] = values
+ pd['clean_text'] = values2
+ pd.to_csv('hhs_press_releases_2018.csv', sep=',', encoding='utf-8')
 
