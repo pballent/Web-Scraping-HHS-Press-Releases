@@ -76,8 +76,8 @@ data = dict(zip(keys, values2))
    
 
 ## Merging them into a data frame
- pd = pandas.DataFrame({'col': keys})
- pd['text'] = values
- pd['clean_text'] = values2
- pd.to_csv('hhs_press_releases_2018.csv', sep=',', encoding='utf-8')
+pd = pandas.DataFrame({'col': keys})
+pd['text'] = values
+pd['clean_text'] = values2
+pd.to_csv('hhs_press_releases_2018.csv', sep=',', encoding='utf-8')
 
