@@ -69,7 +69,8 @@ for i in l2:
     keys.append(i)
     values.append(sube)
     values2.append(subf)
-## merging the two into a dictionary that isn't really needed at this point but could be later
+
+## merging the url-value pairs into a dictionary that isn't really needed at this point but could be later
 data = dict(zip(keys, values2)) 
 ##printing results
    
@@ -78,12 +79,5 @@ data = dict(zip(keys, values2))
  pd = pandas.DataFrame({'col': keys})
  pd['col2'] = values
  pd['col3'] = values2
-pd.to_csv('pd_ouput3.csv', sep=',', encoding='utf-8')
-
-##writing the data frame to disk
-import csv
-with open('mycsvfile2.csv','w') as f:
-    w = csv.writer(f)
-    w.writerow(bigdict.keys())
-    w.writerow(bigdict.values())
+ pd.to_csv('pd_ouput3.csv', sep=',', encoding='utf-8')
 
