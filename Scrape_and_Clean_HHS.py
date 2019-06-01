@@ -4,6 +4,11 @@ Created on Wed May 29 12:09:11 2019
 
 @author: Phil Ballentine
 """
+# Install packages
+# pip install httplib2
+# pip install BeautifulSoup
+# pip install html2text
+# pip install cssselect
 
 ##getting the text from one URL
 import urllib2
@@ -71,8 +76,7 @@ for i in l2:
     values2.append(subf)
 
 ## Merging the url-value pairs into a dictionary that isn't really needed at this point but could be later
-data = dict(zip(keys, values2)) 
-##printing results
+dictionary_of_url_and_text = dict(zip(keys, values2)) 
    
 
 ## Merging them into a data frame
