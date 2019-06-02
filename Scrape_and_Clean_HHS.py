@@ -76,4 +76,4 @@ data = dict(zip(keys, cleaned_values))
 pd = pandas.DataFrame({'col': keys})
 pd['text'] = values
 pd['clean_text'] = cleaned_values
-pd.to_csv('hhs_press_releases_2018_2.csv', sep=',', encoding='utf-8')
+pd.to_csv('hhs_press_releases_2018.csv', sep=',', encoding='utf-8')
